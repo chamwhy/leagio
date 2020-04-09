@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res)=>{
-  res.render('index', {});
+  res.render('game', {});
 });
 http.listen(PORT, ()=>{
   console.log(`leag.io is open at ${PORT}`);

@@ -1,0 +1,47 @@
+{
+  "creater": "chamwhy",
+  "email": "chamwhy1@gmail.com",
+  "game":{
+    "characters":{
+      
+    },
+    "items":{
+      [
+        {
+          "name": "",
+          "cooltime": 4,
+
+        },
+
+      ]
+    },
+    "skills":{
+      "passive": [
+
+      ],
+      "active": [
+
+      ]
+    },
+    "maps":[
+      {
+        "name": "common",
+        "size": [500, 500],
+        "mapImg": "/client/img/maps/common.png",
+
+      },
+      {
+        "name": "rank",
+        "size": [500, 500],
+        "mapImg": "/client/img/maps/rank.png",
+
+      },
+      {
+        "name": "solo",
+        "size": [500, 500],
+        "mapImg": "/client/img/maps/solo.png",
+
+      }
+    ]
+  }
+}
