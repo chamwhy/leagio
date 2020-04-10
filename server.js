@@ -6,13 +6,21 @@ const fs = require('fs');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
+
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, '/public')));
 
+const config = require('./public/client/json/config.json');
+
 app.get('/', (req, res)=>{
-  res.render('game', {});
+  if(config != undefined){
+    res.render('game', {
+      config: config
+    });
+  }
 });
 http.listen(PORT, ()=>{
   console.log(`leag.io is open at ${PORT}`);
