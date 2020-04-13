@@ -34,7 +34,6 @@ export default class Players{
     let magicianHandY = y*1.73/2.2, magicianHandX = x-r*3/4;
     this.drawCircle(magicianHandX, magicianHandY, r/4, l, magicianColor.hand); //draw left hand
     this.drawCircle(magicianHandX+r*3/2, magicianHandY, r/4, l, magicianColor.hand); //draw right hand
-    this.drawImg()
   }
 
   drawImg(x, y, w, d, c){

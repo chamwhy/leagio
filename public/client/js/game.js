@@ -1,24 +1,8 @@
 import Players from "/client/js/players.js";
 import Monsters from "/client/js/monsters.js";
 import Structures from "/client/js/structures.js";
+import UI from "/client/js/ui.js";
 
-let loadImgs = {};
-const setImgs = () => {
-  loadImgs = config.game.imgs;
-  loadImgs.forEach((item, i) => {
-    loadImgs[i] = [loadImgs[i], false];
-    loadImg(i, item);
-  });
-
-};
-
-const loadImg = (name, url) => {
-  let img = new Image();
-  img.addEventListener('load', ()=>{
-    loadImgs[name] = [img, true];
-  }, false);
-  img.src = url;
-}
 
 class Game{
   constructor(canvas){
@@ -27,6 +11,11 @@ class Game{
     this.character = "noob";
     this.username = "chamwhy";
     this.skills = [];
+    this.loadImgs = {};
+  }
+
+  init(){
+    this.setImgs();
   }
 
   setChar(char){
@@ -69,7 +58,8 @@ class Game{
   }
 
   rendUI(){
-
+    let ui = new UI(canvas);
+    ui.render();
   }
 
   drawImg(x, y, d, i){
@@ -78,12 +68,21 @@ class Game{
   }
 
   loadImg(name, url){
-    this.img = new Image();
+    let img = new Image();
     img.addEventListener('load', ()=>{
-      loadImgs[name] = [img, true];
+      this.loadImgs[name] = [img, true];
     }, false);
     img.src = url;
   }
+
+  setImgs(){
+    this.loadImgs = config.game.imgs;
+    this.loadImgs.forEach((item, i) => {
+      this.loadImgs[i] = [this.loadImgs[i], false];
+      this.loadImg(i, item);
+    });
+
+  };
 
 }
 
