@@ -1,15 +1,14 @@
-import Players from "/client/js/players.js";
-import Monsters from "/client/js/monsters.js";
-import Structures from "/client/js/structures.js";
-import UI from "/client/js/ui.js";
-
+import Players from '/client/js/players.js';
+import Monsters from '/client/js/monsters.js';
+import Structures from '/client/js/structures.js';
+import UI from '/client/js/ui.js';
 
 class Game{
   constructor(canvas){
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.character = "noob";
-    this.username = "chamwhy";
+    this.character = 'noob';
+    this.username = 'chamwhy';
     this.skills = [];
     this.loadImgs = {};
   }
