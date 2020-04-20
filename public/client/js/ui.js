@@ -3,7 +3,9 @@ export default class UI{
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
   }
-
+  init(){
+    
+  }
   render(){
     this.drawBox(50, 50, 400, 200, 50, "rgba(0,0,0,.4)");
   }
@@ -20,4 +22,5 @@ export default class UI{
       this.ctx.arc(x1+x-r, y1+y-r, r, 0, Math.PI * 0.5, false);
     }
   }
+
 }

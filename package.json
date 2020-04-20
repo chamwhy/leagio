@@ -12,7 +12,7 @@
     "url": "git+https://github.com/chamwhy/leagio.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chamwhy/leagio/issues"
   },
@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "^3.0.2",
     "express": "^4.17.1",
+    "pixi.js": "^5.2.1",
     "socket.io": "^2.3.0"
   }
 }

@@ -2,6 +2,7 @@ import Players from '/client/js/players.js';
 import Monsters from '/client/js/monsters.js';
 import Structures from '/client/js/structures.js';
 import UI from '/client/js/ui.js';
+// import * as PIXI from '/client/js/pixi.min.js';
 
 class Game{
   constructor(canvas){
@@ -15,6 +16,10 @@ class Game{
 
   init(){
     this.setImgs();
+    this.player = new Players(this.canvas);
+    this.moster = new Monsets(this.canvas);
+    this.structure = new Structures(this.canvas);
+    this.ui = new UI(this.canvas);
   }
 
   setChar(char){
