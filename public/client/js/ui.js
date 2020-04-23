@@ -4,7 +4,7 @@ export default class UI{
     this.ctx = canvas.getContext('2d');
   }
   init(){
-    
+
   }
   render(){
     this.drawBox(50, 50, 400, 200, 50, "rgba(0,0,0,.4)");
