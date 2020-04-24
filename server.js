@@ -34,6 +34,10 @@ io.on('connection', (socket)=>{
     console.log(num);
     socket.emit('h', num);
   });
+  socket.on('peer', (id)=>{
+    console.log(id);
+    io.emit('peer', id);
+  });
 });
 
 http.listen(PORT, ()=>{
